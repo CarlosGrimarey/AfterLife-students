@@ -1,23 +1,22 @@
-/*quitar los autos*/
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Arial, sans-serif;
   background-color: #FFFAF0;
   color: #333;
+  line-height: 1.4;
 }
 
-
+/* Encabezado */
 header {
   background-color: #DEE5D4;
   border-bottom: 2px solid #cfd8c4;
 }
-
 
 .barra-navegacion {
   display: flex;
@@ -26,13 +25,11 @@ header {
   padding: 16px 32px;
 }
 
-
 .logo {
   height: 55px;
   border-radius: 100%;
   border: 2px solid #cfd8c4;
 }
-
 
 /* Botones */
 .btn {
@@ -44,27 +41,12 @@ header {
   transition: 0.3s;
 }
 
-
 .primario {
   background-color: #FFFAF0;
   color: #333;
   border: solid 2px #cfd8c4;
-}
-.primario:hover {
-  background-color: #cfd8c4;
-  transform: translateY(-2px);
-}
-
-
-.secundario {
-  background-color: #FFFAF0;
-  color: #333;
-  border: solid 2px #cfd8c4;
-  margin-left: 12px;
-}
-.secundario:hover {
-  background-color: #e7e2c8;
-  transform: translateY(-2px);
+  font-size: 17px;
+  padding-bottom: 7px;
 }
 
 
@@ -73,9 +55,9 @@ header {
   padding: 12px 25px;
 }
 
-  
+/* Presentación */
 .presentacion {
-  padding: 64px 32px;
+  padding: 64px 10%;
   background-color: #F1EEDC;
   text-align: center;
 }
@@ -88,11 +70,6 @@ header {
   max-width: 600px;
   margin: 0 auto 32px auto;
 }
-
-
-
-
-
 
 /* Ranking */
 .ranking {
@@ -125,7 +102,7 @@ header {
 }
 
 .puntos {
-  font-size: 0.9rem;
+  font-size: 14px;
   color: #555;
 }
 
@@ -153,17 +130,6 @@ footer {
   margin-top: 30px;
 }
 
-.volver-arriba {
-  display: block;
-  margin-top: 8px;
-  font-size: 14px;
-  text-decoration: none;
-  color: #3d4932;
-}
-
-.volver-arriba:hover {
-  text-decoration: underline;
-}
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -185,5 +151,6 @@ footer {
   .barra-navegacion {
     flex-direction: column;
     gap: 12px;
+    padding: 16px;
   }
 }
