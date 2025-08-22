@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfterLife Students</title>
+    <link rel="stylesheet" href="student-or-admin.css">
+</head>
+<body>
+
+    
+    <main class="contenedor">
+        <header>
+            <img src="../assets/Logo-Afterlife.png" alt="Logo AfterLife" class="logo">
+            <h1 class="titulo">¿Eres Estudiante o Administrador?</h1>
+            <p class="subtitulo">Elige tu rol para continuar. Si eres Administrador, deberás ingresar una contraseña.</p>
+        </header>
+
+
+        <section class="grupo-botones">
+            <a href="../Login/Login-section.html" class="btn btn-estudiante">Estudiante</a>
+            <button class="btn btn-admin" id="mostrarPasswordBtn">Administrador</button>
+        </section>
+
+
+        <section id="seccionPassword" class="seccion-password oculto">
+            <label for="passwordAdmin">Ingresa Contraseña de Administrador:</label>
+            <input type="password" id="passwordAdmin" placeholder="Contraseña">
+            <button id="verificarPasswordBtn" class="btn btn-enviar">Enviar</button>
+            <p id="mensajeError" class="mensaje-error oculto">Contraseña incorrecta. Inténtalo de nuevo.</p>
+        </section>
+    </main>
+
+
+    <!--JS para mostrar y ocultar la sección de contraseña-->
+    <script>
+        const mostrarPasswordBtn = document.getElementById("mostrarPasswordBtn");
+        const seccionPassword = document.getElementById("seccionPassword");
+        const verificarPasswordBtn = document.getElementById("verificarPasswordBtn");
+        const passwordAdminInput = document.getElementById("passwordAdmin");
+        const mensajeError = document.getElementById("mensajeError");
+
+        function verificarPassword() {
+            const contrasenaIngresada = passwordAdminInput.value.trim();
+            if (contrasenaIngresada.toLowerCase() === "afterlife") {
+                window.location.href = "../Admin/admin-dashboard.html";
+            } else {
+                mensajeError.classList.remove("oculto");
+                passwordAdminInput.value = "";
+                passwordAdminInput.focus();
+            }
+        }
+
+        mostrarPasswordBtn.addEventListener("click", () => {
+            seccionPassword.classList.remove("oculto");
+            passwordAdminInput.focus();
+        });
+
+        verificarPasswordBtn.addEventListener("click", verificarPassword);
+
+        passwordAdminInput.addEventListener("keypress", (e) => {
+            if (e.key === "Enter") {
+                verificarPassword();
+            }
+        });
+    </script>
+
+</body>
+</html>

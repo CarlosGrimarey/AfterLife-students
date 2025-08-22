@@ -1,0 +1,234 @@
+/* General */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #cfd8c4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Caja centrada */
+.container {
+    background-color: #fdfaf3;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+    padding: 30px;
+    text-align: center;
+}
+
+.logo {
+    width: 25%;
+    max-width: 120px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    border: 3px solid #DEE5D4;
+    background-color: white;
+}
+
+.title {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+/* Botones */
+.buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #DEE5D4;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    color: #333;
+}
+
+.btn:hover {
+    background-color: #cfd8c4;
+    transform: translateY(-2px);
+}
+
+.student-btn {
+    background-color: #a3b18a;
+    color: white;
+}
+
+.student-btn:hover {
+    background-color: #8b9e72;
+}
+
+.admin-btn {
+    background-color: #6b705c;
+    color: white;
+}
+
+.admin-btn:hover {
+    background-color: #555b49;
+}
+
+/* Sección contraseña */
+.password-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    max-width: 300px;
+    width: 100%;
+    margin: auto;
+}
+
+.password-section label {
+    font-weight: bold;
+    color: #333;
+    font-size: 14px;
+}
+
+.password-section input {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.submit-btn {
+    background-color: #a3b18a;
+    color: white;
+}
+
+.submit-btn:hover {
+    background-color: #8b9e72;
+}
+
+/* Mensaje de error */
+.error-msg {
+    color: red;
+    font-size: 14px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Responsive para tablets */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        width: 95%;
+        max-width: 450px;
+    }
+    .logo {
+        width: 30%;
+        max-width: 100px;
+        margin-bottom: 15px;
+    }
+    .title {
+        font-size: 24px;
+    }
+    .subtitle {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    .btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+    .password-section input {
+        font-size: 13px;
+        padding: 8px;
+    }
+}
+
+
+/* Responsive para celulares */
+@media (max-width: 480px) {
+    .container {
+        width: 80%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; /* 🔹 Centra todo horizontalmente */
+        text-align: center;
+    }
+
+    .logo {
+        width: 40%;
+        max-width: 85px;
+        margin-bottom: 20px; /* 🔹 Espacio uniforme debajo */
+        display: block;
+        margin-left: auto; /* 🔹 Centrado horizontal */
+        margin-right: auto;
+    }
+
+    .title {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+        margin-bottom: 18px;
+        line-height: 1.4;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 10px;
+        width: 100%;
+        max-width: 240px;
+        margin: auto;
+    }
+
+    .password-section {
+        max-width: 240px;
+        width: 100%;
+    }
+
+    .password-section label {
+        font-size: 13px;
+    }
+
+    .password-section input {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    .submit-btn {
+        padding: 10px;
+        font-size: 14px;
+        width: 100%;
+    }
+
+    .error-msg {
+        font-size: 12px;
+    }
+}

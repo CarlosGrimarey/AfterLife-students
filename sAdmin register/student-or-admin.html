@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfterLife Students</title>
+    <link rel="stylesheet" href="student-or-admin.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <img src="../assets/Logo-Afterlife.png" alt="AfterLife Logo" class="logo">
+
+        <h1 class="title">Are you a Student or an Admin?</h1>
+        <p class="subtitle">Choose your role to continue. If you are an Admin, you will need to enter a password.</p>
+
+        <div class="buttons">
+            <a href="../register/register.html" class="btn student-btn">Student</a>
+            <button class="btn admin-btn" id="showPasswordBtn">Admin</button>
+        </div>
+
+        <div id="passwordSection" class="password-section hidden">
+            <label for="adminPassword">Enter Admin Password:</label>
+            <input type="password" id="adminPassword" placeholder="Password">
+            <button id="checkPasswordBtn" class="btn submit-btn">Submit</button>
+            <p id="errorMsg" class="error-msg hidden">Incorrect password. Try again.</p>
+        </div>
+    </div>
+
+    <script>
+        const showPasswordBtn = document.getElementById("showPasswordBtn");
+        const passwordSection = document.getElementById("passwordSection");
+        const checkPasswordBtn = document.getElementById("checkPasswordBtn");
+        const adminPasswordInput = document.getElementById("adminPassword");
+        const errorMsg = document.getElementById("errorMsg");
+
+        function checkPassword() {
+            const enteredPassword = adminPasswordInput.value.trim();
+            if (enteredPassword.toLowerCase() === "afterlife") {
+                window.location.href = "../Admin/admin-dashboard.html";
+            } else {
+                errorMsg.classList.remove("hidden");
+                adminPasswordInput.value = "";
+                adminPasswordInput.focus();
+            }
+        }
+
+        showPasswordBtn.addEventListener("click", () => {
+            passwordSection.classList.remove("hidden");
+            adminPasswordInput.focus();
+        });
+
+        checkPasswordBtn.addEventListener("click", checkPassword);
+
+        adminPasswordInput.addEventListener("keypress", (e) => {
+            if (e.key === "Enter") {
+                checkPassword();
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aura Ranking</title>
+  <link rel="stylesheet" href="ranking.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <nav class="navigation">
+      <a href="../home-page.html">Home</a>
+      <a href="../historial.html">History</a>
+      <a href="../ranking/ranking.html" class="active">Ranking</a>
+      <a href="../perfil.html">My Profile</a>
+    </nav>
+  </header>
+
+  <!-- Presentation -->
+  <main>
+    <section class="presentation">
+      <h2>Aura Ranking</h2>
+      <p>Track the aura points of each player in dynamic progress bars.</p>
+    </section>
+
+    <!-- Ranking -->
+    <section class="ranking">
+
+      <article class="player" data-aura="479">
+        <span class="name">Carlos</span>
+        <span class="points">479 EXP</span>
+        <div class="aura-bar">
+          <div class="aura-fill"></div>
+        </div>
+      </article>
+
+      <article class="player" data-aura="292">
+        <span class="name">David</span>
+        <span class="points">292 EXP</span>
+        <div class="aura-bar">
+          <div class="aura-fill"></div>
+        </div>
+      </article>
+
+      <article class="player" data-aura="281">
+        <span class="name">William</span>
+        <span class="points">281 EXP</span>
+        <div class="aura-bar">
+          <div class="aura-fill"></div>
+        </div>
+      </article>
+
+      <article class="player" data-aura="123">
+        <span class="name">Oswin</span>
+        <span class="points">123 EXP</span>
+        <div class="aura-bar">
+          <div class="aura-fill"></div>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <!-- Script -->
+  <script>
+    const players = document.querySelectorAll(".player");
+    players.forEach(player => {
+      const aura = parseInt(player.dataset.aura);
+      const percent = Math.min((aura / 1000) * 100, 100);
+      player.querySelector(".aura-fill").style.width = percent + "%";
+    });
+  </script>
+
+</body>
+</html>

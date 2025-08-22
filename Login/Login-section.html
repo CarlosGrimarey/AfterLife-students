@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfterLife Students - Login</title>
+    <link rel="stylesheet" href="Login-section.css">
+</head>
+
+<body>
+
+    <main class="contenedor-principal">
+        <section class="contenedor-formulario">
+
+            <img src="../assets/Logo-Afterlife.png" alt="Logo AfterLife" class="logo">
+
+            <header>
+                <h1 class="titulo-formulario">Login</h1>
+            </header>
+
+            <form id="loginForm">
+                <fieldset class="grupo-campo">
+                    <label for="username">Username:</label>
+                    <input class="campo-texto" type="text" id="username" name="username" required>
+                </fieldset>
+
+                <fieldset class="grupo-campo">
+                    <label for="password">Password:</label>
+                    <input class="campo-texto" type="password" id="password" name="password" required>
+                </fieldset>
+
+                <footer>
+                    <a href="../Home-page-student/home-page.html" id="loginBtn" class="boton-enviar">Login</a>
+                </footer>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        const loginForm = document.getElementById("loginForm");
+        const loginBtn = document.getElementById("loginBtn");
+
+        loginBtn.addEventListener("click", function (event) {
+            event.preventDefault(); // Evita que el enlace se ejecute
+            if (loginForm.checkValidity()) {
+                window.location.href = "../Home-page-student/home-page.html"; // Redirige si todo está bien
+            } else {
+                loginForm.reportValidity(); // Muestra mensajes de error del navegador
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+/*nada auto*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F1EEDC;
+    color: #333;
+    padding-top: 70px; 
+}
+
+
+.header {
+    background-color:#DEE5D4 ;
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+
+.header h1 {
+    font-size: 27px;
+    background-color: #FFFAF0;
+    border-radius: 15px;
+    padding: 2px 7px;
+    border: solid 1px #7e6868;
+}
+
+
+.cerrarsesion {
+    background-color: #FFFAF0;
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 1px solid #7e6868;
+    font-size: 17px;
+}
+.cerrarsesion:hover {
+    background-color: #E9E2D0;
+}
+
+
+
+.bienvenida {
+    background-color: #FFFAF0;
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 1px solid #DEE5D4;
+    border: solid 1px #DEE5D4;
+    border-top: 1px solid #DEE5D4;
+}
+.bienvenida h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+.bienvenida p {
+    font-size: 20px;
+    color: #666;
+}
+
+
+
+
+.menu {
+    display: grid;/*column y filas combinado*/
+    gap: 20px;/*espacio entre columnas*/
+    margin: 40px;
+}
+
+/*card osea historial rankin ....*/
+.card {
+    background-color: #FFFAF0;
+    border: 1px solid #DEE5D4;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+.card h3 {
+    margin-bottom: 10px;
+    font-size: 23px;
+    color: #333;
+}
+.card p {
+    font-size: 20px;
+    color: #555;
+}
+
+.wide {
+    grid-column: span 2; /* ocupa toda la fila o poner history y ranking*/
+}
+
+.header {
+    background-color: #DEE5D4;
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #DEE5D4;
+    position: absolute;
+border: solid 2px #7e6868;
+    left:48%;
+}
+
+
+
+/*responsive tablet*/
+@media (max-width: 768px) {
+
+    .header {
+        padding: 18px 20px;
+    }
+
+    .cerrarsesion {
+        padding: 6px 12px;
+        font-size: 17px;
+        border-radius: 10px;
+    }
+
+    .menu {
+        grid-template-columns: 1fr;
+    }
+
+    .wide {
+        grid-column: span 1;
+    }
+
+    .logo {
+      display: none;
+    }
+
+    .header h1 {
+        font-size: 25px;
+        background-color: #FFFAF0;
+        border-radius: 15px;
+        padding: 2px 7px;
+    }
+} /* ← Cierre agregado aquí */
+
+/*celular responsive*/
+@media (max-width: 480px) {
+    .cerrarsesion {
+        padding: 5px 10px;
+        font-size: 17px;
+    }
+
+    .bienvenida {
+        padding: 20px 10px;
+    }
+    .logo{
+      display: none;
+    }
+
+    .header h1 {
+        font-size: 24px;
+        background-color: #FFFAF0;
+        border-radius: 15px;
+        padding: 2px 7px;
+        border: solid 2px #7e6868;
+    }
+}

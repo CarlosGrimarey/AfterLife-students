@@ -1,0 +1,147 @@
+    /*clases y basico en css*/
+/* class → Se llama con un punto (.) en CSS. 
+   Sirve para dar estilos a varios elementos que comparten la misma clase. */
+
+/* id → Se llama con un # en CSS. 
+   Sirve para dar estilos a un único elemento. Solo debe usarse una vez por página. */
+
+/* selector → Es la parte antes de las llaves {} que indica a qué elementos se aplica el estilo. */
+
+/* propiedad → Es lo que quieres cambiar del elemento (color, tamaño, etc.). */
+
+/* valor → Es el ajuste que le das a la propiedad. */
+
+/* declaración → propiedad + valor dentro de un selector. */
+
+
+
+/* ===== DISPLAY ===== */
+/* display: block; → Ocupa todo el ancho disponible y empieza en una nueva línea. */
+
+/* display: inline; → Ocupa solo lo necesario y no empieza en nueva línea. */
+
+/* display: inline-block; → Se comporta como inline pero acepta alto y ancho personalizados. */
+
+/* display: flex; → Activa un contenedor flexible para alinear elementos fácilmente. */
+
+/* display: grid; → Activa un sistema de cuadrícula para organizar elementos. */
+
+
+
+/* ===== POSICIONAMIENTO ===== */
+/* position: static; → Valor por defecto, sigue el flujo normal de la página. */
+
+/* position: relative; → Permite mover un elemento respecto a su posición original. */
+
+/* position: absolute; → Posiciona un elemento respecto a su contenedor más cercano con posición distinta a static. */
+
+/* position: fixed; → Fija un elemento en pantalla incluso al hacer scroll. */
+
+/* position: sticky; → Elemento que se queda fijo en una posición cuando se hace scroll, pero solo dentro de su contenedor. */
+
+
+
+/* ===== FORMATO DE TEXTO ===== */
+/* color → Cambia el color del texto. */
+
+/* font-size → Cambia el tamaño del texto. */
+
+/* font-family → Cambia el tipo de letra. */
+
+/* font-weight → Cambia el grosor de la letra (normal, bold, etc.). */
+
+/* text-align → Alinea el texto (left, center, right, justify). */
+
+/* text-decoration → Agrega o quita subrayado, línea superior o tachado. */
+
+/* line-height → Ajusta la altura de línea (espaciado vertical del texto). */
+
+/* letter-spacing → Ajusta el espacio entre letras. */
+
+
+
+/* ===== FONDOS Y COLORES ===== */
+/* background-color → Cambia el color de fondo. */
+
+/* background-image → Pone una imagen de fondo. */
+
+/* background-size → Ajusta el tamaño de la imagen (cover, contain, etc.). */
+
+/* background-position → Ajusta la posición de la imagen de fondo. */
+
+
+
+/*!para margenes y esas cosas/
+/* margin → Espacio exterior entre el elemento y otros. */
+
+/* padding → Espacio interior entre el borde y el contenido. */
+
+/* border → Define borde (grosor, estilo y color). */
+
+/* border-radius → Redondea las esquinas. */
+
+/* box-shadow → Sombra alrededor del elemento. */
+
+
+
+/*!para form*/
+/* input, textarea, select → Campos de formulario que pueden estilizarse. */
+
+/* :focus → Estado cuando un campo está activo o seleccionado. */
+
+/* :hover → Estado cuando el cursor pasa sobre el elemento. */
+
+/* :checked → Estado cuando un checkbox o radio está seleccionado. */
+
+
+
+/*?porseacaso*/
+/* z-index → Controla qué elemento está delante o detrás. */
+
+/* overflow → Controla qué pasa si el contenido se sale (visible, hidden, scroll). */
+
+/* opacity → Controla la transparencia del elemento. */
+
+/* transition → Agrega animaciones suaves en cambios de estilos. */
+
+/* transform → Mueve, rota, escala o inclina un elemento. */
+
+
+
+/*!etiquetas semánticas
+<header>
+Define el encabezado de una página o sección.
+Puede contener logotipos, títulos y menús principales.
+
+<nav>
+Sección que agrupa enlaces de navegación, como menús o índices.
+
+<main>
+Contiene el contenido principal único de la página.
+Solo debe haber uno por documento.
+
+<section>
+Agrupa contenido relacionado en una misma temática.
+Suele tener su propio encabezado.
+
+<article>
+Contenido independiente y autocontenido, como un post, noticia o entrada de blog.
+
+<aside>
+Contenido relacionado pero no central, como barras laterales o notas adicionales.
+
+<footer>
+Pie de página de una página o sección.
+Puede incluir información de contacto, derechos de autor o enlaces.
+
+<figure>
+Contenedor para imágenes, gráficos o diagramas con una descripción.
+
+<figcaption>
+Leyenda o descripción para el contenido de <figure>.
+
+<address>
+Información de contacto del autor o de la organización.
+
+<time>
+Representa una fecha u hora específica, legible por humanos y máquinas.*/

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AfterLife Students</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!--encabezado-->
+  <header>
+    <nav class="barra-navegacion">
+        <img src="assets/Logo-Afterlife.png" alt="Logo AfterLife Students" class="logo">
+      </a>
+      <div class="acciones">
+        <a href="./student or admin login/student-or-admin.html" class="btn primario">Login</a>
+        <a href="./sAdmin register/student-or-admin.html" class="btn secundario">Sign Up</a>
+      </div>
+    </nav>
+  </header>
+
+  
+  <!--Contenido principal-->
+
+  <main>
+    <section class="presentacion">
+      <h1>Welcome to AfterLife Students</h1>
+      <p>
+        AfterLife Students is a competitive and progressive environment where students can measure 
+        and improve their performance through their <strong>Aura</strong>.
+      </p>
+      <a href="./sAdmin register/student-or-admin.html" class="btn primario grande">Get Started</a>
+    </section>
+
+
+    
+    <!--code ia-->
+    <!-- Sección Ranking Aura -->
+    <section class="ranking">
+      <h2>Aura Ranking</h2>
+
+
+
+
+      <!--poner data aura para el script-->
+      <article class="jugador" data-aura="479">
+        <header>
+          <span class="nombre">Carlos</span>
+          <span class="puntos">479 EXP</span>
+        </header>
+        <div class="barra-aura">
+          <div class="relleno-aura"></div>
+        </div>
+      </article>
+
+
+
+      <!--poner data aura para el script-->
+      <article class="jugador" data-aura="292">
+        <header>
+          <span class="nombre">David</span>
+          <span class="puntos">292 EXP</span>
+        </header>
+        <div class="barra-aura">
+          <div class="relleno-aura"></div>
+        </div>
+      </article>
+
+      <!--poner data aura para el script-->
+      <article class="jugador" data-aura="281">
+        <header>
+          <span class="nombre">Ana</span>
+          <span class="puntos">28  EXP</span>
+        </header>
+        <div class="barra-aura">
+          <div class="relleno-aura"></div>
+        </div>
+      </article>
+
+
+      <!--poner data aura para el script-->
+      <article class="jugador" data-aura="132">
+        <header>
+          <span class="nombre">Oswin</span>
+        <span class="puntos">132EXP</span>
+        </header>
+        <div class="barra-aura">
+          <div class="relleno-aura"></div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+
+  <!-- Pie de página -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const jugadores = document.querySelectorAll(".jugador");
+
+    jugadores.forEach(jugador => {
+      const aura = parseInt(jugador.getAttribute("data-aura")); 
+      const relleno = jugador.querySelector(".relleno-aura");
+
+      // 1000 puntos = 100% | 0 puntos = 0%
+      let porcentaje = (aura / 1000) * 100;
+
+      // aplicar al ancho de la barra
+      relleno.style.width = porcentaje + "%";
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #cfd8c4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #FFFAF0; /* Color crema */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 80%;  /* Ajuste para que no ocupe toda la pantalla */
+    max-width: 700px;
+}
+
+.logo {
+    width: 20%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    border: 3px solid #DEE5D4;
+    background-color: white;
+}
+
+.titulo {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.grupo-botones {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #DEE5D4;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    color: #333;
+}
+
+.btn:hover {
+    background-color: #cfd8c4;
+    transform: translateY(-2px);
+}
+
+.btn-estudiante {
+    background-color: #a3b18a;
+    color: white;
+}
+
+.btn-estudiante:hover {
+    background-color: #8b9e72;
+}
+
+.btn-admin {
+    background-color: #6b705c;
+    color: white;
+}
+
+.btn-admin:hover {
+    background-color: #555b49;
+}
+
+.seccion-password {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.seccion-password label {
+    font-weight: bold;
+    color: #333;
+}
+
+/*adminitracion*/
+.seccion-password input {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.btn-enviar {
+    background-color: #a3b18a;
+    color: white;
+}
+
+.btn-enviar:hover {
+    background-color: #8b9e72;
+}
+
+.mensaje-error {
+    color: red;
+    font-size: 14px;
+}
+
+.oculto {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .contenedor {
+        width: 90%;
+        padding: 20px;
+    }
+    .titulo {
+        font-size: 24px;
+    }
+    .subtitulo {
+        font-size: 14px;
+    }
+}
